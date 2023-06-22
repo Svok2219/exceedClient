@@ -33,7 +33,7 @@ const CourseModule = ({ Courses }) => {
 
   const fetchDataCourse = async () => {
     const response = await axios.get(
-      `http://localhost:5000/ModulesRouter/${params.id}`
+      `https://server-exceed-lms.onrender.com/ModulesRouter/${params.id}`
     );
     return setProgress(response.data);
   };
