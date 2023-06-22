@@ -22,7 +22,7 @@ function App() {
 
   const fetchDataCourse = async () => {
     const response = await axios.get(
-      `http://localhost:5000/ProgressRouter/${Loggedin.Email}`
+      `https://server-exceed-lms.onrender.com/ProgressRouter/${Loggedin.Email}`
     );
     return setCourses(response.data);
   };
