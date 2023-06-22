@@ -12,7 +12,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/UserRouter/", {
+    fetch("https://server-exceed-lms.onrender.com/UserRouter/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
