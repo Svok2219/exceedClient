@@ -20,7 +20,7 @@ const Home = () => {
   const [Course, setCourse] = useState([]);
   const fetchDataCourse = () => {
     return axios
-      .get(`http://localhost:5000/CourseRouter/getAllUser`)
+      .get(`https://server-exceed-lms.onrender.com/CourseRouter/getAllUser`)
       .then((response) => setCourse(response.data.content));
   };
   useEffect(() => {
