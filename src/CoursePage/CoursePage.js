@@ -64,7 +64,7 @@ const CoursePage = () => {
   console.log(Course);
 
   const handleToken = (token) => {
-    fetch("http://localhost:5000/Payment", {
+    fetch("https://server-exceed-lms.onrender.com/Payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const CoursePage = () => {
       .then((_) => {
         window.alert(`!Payment Recived!
         ... Sending data to server......`);
-        fetch("http://localhost:5000/OrdersRouter", {
+        fetch("https://server-exceed-lms.onrender.com/OrdersRouter", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -134,7 +134,7 @@ const CoursePage = () => {
         }
       });
   };
-  // http://localhost:5000/CourseRouter/
+  // https://server-exceed-lms.onrender.com/CourseRouter/
 
   const params = useParams();
 
@@ -142,7 +142,7 @@ const CoursePage = () => {
 
   const fetchDataCourse = async () => {
     const response = await axios.get(
-      `http://localhost:5000/CourseRouter/${params.id}`
+      `https://server-exceed-lms.onrender.com/CourseRouter/${params.id}`
     );
     return SetCourse(response.data);
   };
