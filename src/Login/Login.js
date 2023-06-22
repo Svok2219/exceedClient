@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/Authenticate", {
+    fetch("https://server-exceed-lms.onrender.com/Authenticate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
